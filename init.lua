@@ -255,6 +255,14 @@ require('lazy').setup({
       },
     },
   },
+  {
+    'morhetz/gruvbox',
+    priority = 1000,
+    config = function()
+      vim.o.background = 'dark'
+      vim.cmd.colorscheme 'gruvbox'
+    end,
+  },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
