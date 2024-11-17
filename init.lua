@@ -263,6 +263,15 @@ require('lazy').setup({
       vim.cmd.colorscheme 'gruvbox'
     end,
   },
+  {
+    'preservim/nerdtree',
+    config = function()
+      -- NERDTree Settings
+      vim.g.NERDTreeShowHidden = 1 -- Show hidden files in NERDTree
+      -- Key mappings to toggle NERDTree
+      vim.api.nvim_set_keymap('n', '<F12>', ':NERDTreeToggle<CR>', { noremap = true, silent = true })
+    end,
+  },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
